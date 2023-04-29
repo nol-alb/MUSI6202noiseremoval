@@ -1,3 +1,12 @@
+%{
+Denoising interface function
+    Input parameters: y - input noisy, single channel audio signal
+                     fs - sampling frequency of noisy, signle channel audio
+                     signal
+    Output: xhat - estimate of input signal with the noise removed
+%}
+
+
 function xhat = denoise(y, fs)
 % Extract the first three seconds of noise
     noise_only = y(1:3*fs);
